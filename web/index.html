@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="es" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <title>SIG Pumpunya - Accesibilidad vial post-sísmica</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#1e1e1e" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Geist+Mono:wght@400..600&display=swap"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="app">
+      <aside id="panel">
+        <h1>SIG Pumpunya</h1>
+        <div>Accesibilidad vial post-sísmica</div>
+        <h2>Resumen por escenario</h2>
+        <table id="tabla">
+          <thead>
+            <tr>
+              <th>Escenario</th>
+              <th>Tramos bloq.</th>
+              <th>Viv. sin acceso</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <h2>Simulador</h2>
+        <div>Sesión: <code id="ses">–</code></div>
+        <div style="margin-top: 4px">Al hacer clic en el mapa:</div>
+        <div id="modos"></div>
+        <div>
+          <button id="bDes">Deshacer</button><button id="bRes">Reiniciar</button>
+          <button id="bOpt">Ubicación óptima</button
+          ><button id="bQuitar">Quitar último puesto</button>
+        </div>
+        <div id="opt"></div>
+        <div id="msg"></div>
+        <h2>Leyenda</h2>
+        <div><span class="sw" style="background: #2e7d32"></span>Vía libre</div>
+        <div><span class="sw" style="background: #ef6c00"></span>Vía bloqueada parcial</div>
+        <div><span class="sw" style="background: #c62828"></span>Vía bloqueada total</div>
+        <div><span class="sw" style="background: #fdd835"></span>Predio afectado leve</div>
+        <div><span class="sw" style="background: #fb8c00"></span>Predio colapso parcial</div>
+        <div><span class="sw" style="background: #d32f2f"></span>Predio colapso total</div>
+        <div><span class="sw" style="background: #1565c0"></span>Puesto de auxilio</div>
+        <div><span class="sw" style="background: transparent; border: 1.5px solid #ffffff"></span>Predio sin daño</div>
+      </aside>
+      <main id="maps">
+        <div class="pane">
+          <select class="sel" id="sel0"></select>
+          <div class="map" id="map0"></div>
+        </div>
+        <div class="pane">
+          <select class="sel" id="sel1"></select>
+          <div class="map" id="map1"></div>
+        </div>
+      </main>
+    </div>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="config.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
