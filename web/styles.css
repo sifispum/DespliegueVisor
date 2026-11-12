@@ -347,3 +347,20 @@ button:focus-visible {
     transition: none !important;
   }
 }
+
+
+.leaflet-tooltip.id-tooltip {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  color: #ffffff !important;
+  font-family: var(--font-mono), monospace !important;
+  font-size: 11px !important;
+  font-weight: bold !important;
+  text-shadow: 
+    -1px -1px 0 #000,  
+     1px -1px 0 #000,
+    -1px  1px 0 #000,
+     1px  1px 0 #000,
+     0 0 4px #000 !important;
+}
