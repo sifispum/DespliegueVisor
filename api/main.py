@@ -77,10 +77,12 @@ class Punto(BaseModel):
     lat: float
 
 @app.get("/")
+@app.head("/")
 def raiz():
     return {"servicio": "SIG Pumpunya API Cloud", "docs": "/docs", "estado": "online"}
 
 @app.get("/api/salud")
+@app.head("/api/salud")
 def salud():
     return {"estado": "ok", "cloud": True}
 
